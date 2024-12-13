@@ -1,11 +1,19 @@
 'use client';
 import { Search } from 'lucide-react';
 import { Input } from '@/components/ui/input';
+import { usePathname, useSearchParams, useRouter } from 'next/navigation';
 
 export default function SearchInput() {
+  const searchParams = useSearchParams();
+  const pathName = usePathname();
+  const {replace} = useRouter();
 
-  function handleChange(event: any) {
-    console.log('busca sendo feita');
+  function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
+    const searchString = event.currentTarget.value;
+
+    if(searchString) {
+      
+    }
   }
 
   return (
