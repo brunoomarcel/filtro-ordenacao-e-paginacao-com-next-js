@@ -40,7 +40,9 @@ export default function OrdersTable({orders}: OrdersTableProps) {
         {orders.map((order) => (
           <TableRow key={order.id}>
             <TableCell>
-              <div className="font-medium"></div>
+              <div className="font-medium">
+                {order.customer_name}
+              </div>
               <div className="hidden md:inline text-sm text-muted-foreground">
                 {order.customer_email}
               </div>

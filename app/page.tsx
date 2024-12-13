@@ -12,19 +12,27 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 
-export default async function Component() {
+  export default async function Component({
+    searchParams,
+  }: {
+    searchParams?: {search?: string};
+  }) {
 
+  console.log(searchParams);
   const response = await axios.get(
-    'https://apis.codante.io/api/orders-api/orders',
-    {
+    'https://apis.codante.io/api/orders-api/orders', {
       params: {
-        page: 1
+        search: searchParams?.search,
       }
-    } 
-  )
-  
-    const orders = response.data.data;
+    }
+  );
+
+  //'https://apis.codante.io/api/orders-api/orders?search=qualquercoisa
+
+  const orders = response.data.data;
+
   console.log(orders)
+
 
   return (
     <main className="container px-1 py-10 md:p-10">
