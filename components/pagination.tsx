@@ -12,7 +12,9 @@ export default function Pagination() {
   return (
     <PaginationComponent>
       <PaginationContent>
-        <PaginationItem>
+
+        
+        {/* <PaginationItem>
           <PaginationPrevious />
         </PaginationItem>
         <PaginationItem className="hidden md:inline-flex">
@@ -38,7 +40,7 @@ export default function Pagination() {
         </PaginationItem>
         <PaginationItem>
           <PaginationNext />
-        </PaginationItem>
+        </PaginationItem> */}
       </PaginationContent>
     </PaginationComponent>
   );

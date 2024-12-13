@@ -14,8 +14,16 @@ import {
 
 export default async function Component() {
 
-  const response = await axios.get('https://apis.codante.io/api/orders-api/orders')
-  const orders = response.data.data;
+  const response = await axios.get(
+    'https://apis.codante.io/api/orders-api/orders',
+    {
+      params: {
+        page: 1
+      }
+    } 
+  )
+  
+    const orders = response.data.data;
   console.log(orders)
 
   return (
